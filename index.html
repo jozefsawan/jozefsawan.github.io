@@ -6,7 +6,7 @@
   <title>Jozef Sawan - Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/3b0b25e80c.js" crossorigin="anonymous"></script>
@@ -18,14 +18,18 @@
   <div class="hero-section">
     <div class="content">
       <header>
-        <div class="logo">JOZEF SAWAN</div>
+        <div class="logo text-gradient">JOZEF SAWAN</div>
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
         <nav>
-          <ul>
-            <li><a href="#about" class="en">About</a><a href="#about" class="fr">À propos</a></li>
-            <li><a href="#education" class="en">Education</a><a href="#education" class="fr">Formation</a></li>
-            <li><a href="#experience" class="en">Experience</a><a href="#experience" class="fr">Expérience</a></li>
-            <li><a href="#skills" class="en">Skills</a><a href="#skills" class="fr">Compétences</a></li>
-            <li><a href="#contact" class="en">Contact</a><a href="#contact" class="fr">Contact</a></li>
+          <ul id="nav-menu">
+            <li style="--i:1"><a href="#about" class="en">About</a><a href="#about" class="fr">À propos</a></li>
+            <li style="--i:2"><a href="#skills" class="en">Skills</a><a href="#skills" class="fr">Compétences</a></li>
+            <li style="--i:3"><a href="#education" class="en">Education</a><a href="#education" class="fr">Formation</a></li>
+            <li style="--i:4"><a href="#experience" class="en">Experience</a><a href="#experience" class="fr">Expérience</a></li>
+            <li style="--i:5"><a href="#interests" class="en">Interests</a><a href="#interests" class="fr">Intérêts</a></li>
+            <li style="--i:6"><a href="#contact" class="en">Contact</a><a href="#contact" class="fr">Contact</a></li>
           </ul>
         </nav>
         <div class="language-switcher">
@@ -36,16 +40,32 @@
       </header>
       
       <section class="hero">
-        <div class="hero-content">
-          <h1 class="en">Mechanical<span class="highlight"> Engineering</span></h1>
-          <h1 class="fr">Ingénierie<span class="highlight"> Mécanique</span></h1>
-          <p class="lead en">Master's degree in Mechanical and Materials Engineering.</p>
-          <p class="lead fr">Master de Génie Mécanique et Matériaux.</p>
+        <div class="hero-content glass-effect">
+          <div class="hero-greeting">
+            <span class="en">Hello, I'm</span>
+            <span class="fr">Bonjour, je suis</span>
+          </div>
+          <h1 class="en">Jozef <span class="text-gradient">Sawan</span></h1>
+          <h1 class="fr">Jozef <span class="text-gradient">Sawan</span></h1>
+          <div class="hero-subtitle">
+            <span class="en">Mechanical <span class="highlight">Engineering</span></span>
+            <span class="fr">Ingénierie <span class="highlight">Mécanique</span></span>
+          </div>
+          <p class="lead en">Master's degree in Mechanical and Materials Engineering with a passion for innovation and problem-solving.</p>
+          <p class="lead fr">Master de Génie Mécanique et Matériaux avec une passion pour l'innovation et la résolution de problèmes.</p>
           <div class="cta-buttons">
-            <a href="#experience" class="btn btn-primary en">View My Experience</a>
-            <a href="#experience" class="btn btn-primary fr">Voir Mon Expérience</a>
-            <a href="#contact" class="btn btn-secondary en">Get In Touch</a>
-            <a href="#contact" class="btn btn-secondary fr">Me Contacter</a>
+            <a href="#experience" class="btn btn-primary en">
+              <i class="fas fa-briefcase"></i> View My Experience
+            </a>
+            <a href="#experience" class="btn btn-primary fr">
+              <i class="fas fa-briefcase"></i> Voir Mon Expérience
+            </a>
+            <a href="#contact" class="btn btn-secondary en">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="#contact" class="btn btn-secondary fr">
+              <i class="fas fa-paper-plane"></i> Me Contacter
+            </a>
           </div>
         </div>
         <div class="scroll-indicator">
@@ -75,20 +95,6 @@
             <p class="en">I hold French, Austrian, and Lebanese nationalities, which has given me a multicultural perspective and fluency in multiple languages.</p>
             <p class="fr">Je possède les nationalités française, autrichienne et libanaise, ce qui m'a donné une perspective multiculturelle et une maîtrise de plusieurs langues.</p>
             
-            <div class="personal-info">
-              <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span></span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span></span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <span></span>
-              </div>
-            </div>
             <div class="skills-container">
               <h3 class="en">Languages</h3>
               <h3 class="fr">Langues</h3>
@@ -219,23 +225,52 @@
     <section id="education" class="education section-padding">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up"><span class="en">Education</span><span class="fr">Formation</span></h2>
-        <div class="timeline" data-aos="fade-up" data-aos-delay="200">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">Master's Degree in Mechanical Engineering and Materials (GMM)</h3>
-              <h3 class="fr">Master 2 en Génie Mécanique et Matériaux (GMM)</h3>
-              <h4>Université Bretagne Sud</h4>
-              <p class="timeline-date">2024 - 2025</p>
+        <div class="education-grid" data-aos="fade-up">
+          <div class="education-card">
+            <div class="education-card-header">
+              <div class="education-year">2024 - 2025</div>
+              <div class="education-degree">
+                <h3 class="en">Master's Degree in Mechanical Engineering and Materials (GMM)</h3>
+                <h3 class="fr">Master 2 en Génie Mécanique et Matériaux (GMM)</h3>
+              </div>
+            </div>
+            <div class="education-card-body">
+              <div class="education-institution">
+                <i class="fas fa-university"></i>
+                <span>Université Bretagne Sud</span>
+              </div>
+              <div class="education-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Lorient, France</span>
+              </div>
+              <div class="education-description">
+                <p class="en">Specialization in mechanical engineering with a focus on materials science and advanced manufacturing techniques.</p>
+                <p class="fr">Spécialisation en génie mécanique avec un accent sur la science des matériaux et les techniques de fabrication avancées.</p>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">Bachelor's Degree in Mechanical Engineering and Production (GMP)</h3>
-              <h3 class="fr">Licence en Génie Mécanique et Productique (GMP)</h3>
-              <h4>Université Grenoble Alpes</h4>
-              <p class="timeline-date">2018 - 2023</p>
+
+          <div class="education-card">
+            <div class="education-card-header">
+              <div class="education-year">2018 - 2023</div>
+              <div class="education-degree">
+                <h3 class="en">Bachelor's Degree in Mechanical Engineering and Production (GMP)</h3>
+                <h3 class="fr">Licence en Génie Mécanique et Productique (GMP)</h3>
+              </div>
+            </div>
+            <div class="education-card-body">
+              <div class="education-institution">
+                <i class="fas fa-university"></i>
+                <span>Université Grenoble Alpes</span>
+              </div>
+              <div class="education-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Grenoble, France</span>
+              </div>
+              <div class="education-description">
+                <p class="en">Comprehensive education in mechanical engineering fundamentals, CAD design, and manufacturing processes.</p>
+                <p class="fr">Formation complète sur les fondamentaux du génie mécanique, la conception CAO et les processus de fabrication.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -246,127 +281,186 @@
     <section id="experience" class="experience section-padding">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up"><span class="en">Professional Experience</span><span class="fr">Expérience Professionnelle</span></h2>
-        <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+        <div class="experience-container" data-aos="fade-up">
           <!-- JoCard -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">Entrepreneurship - Pépite</h3>
-              <h3 class="fr">Création d'entreprise - Pépite</h3>
-              <h4>JoCard</h4>
-              <p class="timeline-date en">March - July 2024</p>
-              <p class="timeline-date fr">Mars - Juillet 2024</p>
-              <p class="en">Creation of a company in Lorient with the national student entrepreneur status.</p>
-              <p class="fr">Création d'une entreprise à Lorient avec le statut national d'étudiant entrepreneur.</p>
+          <div class="experience-card">
+            <div class="experience-card-side">
+              <div class="experience-logo">
+                <span class="logo-placeholder">JC</span>
+              </div>
+              <div class="experience-period">
+                <div class="experience-date en">Mar - Jul 2024</div>
+                <div class="experience-date fr">Mar - Juil 2024</div>
+                <div class="experience-duration en">5 months</div>
+                <div class="experience-duration fr">5 mois</div>
+              </div>
+            </div>
+            <div class="experience-card-main">
+              <div class="experience-header">
+                <h3 class="experience-role en">Entrepreneurship - Pépite</h3>
+                <h3 class="experience-role fr">Création d'entreprise - Pépite</h3>
+                <h4 class="experience-company">JoCard</h4>
+                <div class="experience-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Lorient, France</span>
+                </div>
+              </div>
+              <div class="experience-description">
+                <p class="en">Creation of a company in Lorient with the national student entrepreneur status. Development of a digital business card solution with NFC technology.</p>
+                <p class="fr">Création d'une entreprise à Lorient avec le statut national d'étudiant entrepreneur. Développement d'une solution de carte de visite digitale avec technologie NFC.</p>
+              </div>
+              <div class="experience-skills">
+                <span class="skill-tag">Entrepreneurship</span>
+                <span class="skill-tag">NFC Technology</span>
+                <span class="skill-tag">Business Development</span>
+                <span class="skill-tag">Product Design</span>
+              </div>
             </div>
           </div>
           
           <!-- iGoFlex -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">IT Internship</h3>
-              <h3 class="fr">Stage Informatique</h3>
-              <h4>iGoFlex</h4>
-              <p class="timeline-date en">December 2022 - September 2023</p>
-              <p class="timeline-date fr">Décembre 2022 - Septembre 2023</p>
-              <p class="en">Participation in the development of an embedded application. Development of the e-commerce website: <a href="http://www.iGoFlex.com" target="_blank">www.iGoFlex.com</a>. Automation of order integration into a database.</p>
-              <p class="fr">Participation à l'élaboration d'une application embarquée. Développement du site marchand : <a href="http://www.iGoFlex.com" target="_blank">www.iGoFlex.com</a>. Automatisation de l'intégration des commandes dans une base de données.</p>
+          <div class="experience-card">
+            <div class="experience-card-side">
+              <div class="experience-logo">
+                <span class="logo-placeholder">iG</span>
+              </div>
+              <div class="experience-period">
+                <div class="experience-date en">Dec 2022 - Sep 2023</div>
+                <div class="experience-date fr">Déc 2022 - Sep 2023</div>
+                <div class="experience-duration en">10 months</div>
+                <div class="experience-duration fr">10 mois</div>
+              </div>
+            </div>
+            <div class="experience-card-main">
+              <div class="experience-header">
+                <h3 class="experience-role en">IT Internship</h3>
+                <h3 class="experience-role fr">Stage Informatique</h3>
+                <h4 class="experience-company">iGoFlex</h4>
+                <div class="experience-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Paris, France</span>
+                </div>
+              </div>
+              <div class="experience-description">
+                <p class="en">Participation in the development of an embedded application. Development of the e-commerce website: <a href="http://www.iGoFlex.com" target="_blank">www.iGoFlex.com</a>. Automation of order integration into a database.</p>
+                <p class="fr">Participation à l'élaboration d'une application embarquée. Développement du site marchand : <a href="http://www.iGoFlex.com" target="_blank">www.iGoFlex.com</a>. Automatisation de l'intégration des commandes dans une base de données.</p>
+              </div>
+              <div class="experience-skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">E-commerce</span>
+                <span class="skill-tag">Database Management</span>
+              </div>
             </div>
           </div>
           
           <!-- Phonexpat -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">IT Internship</h3>
-              <h3 class="fr">Stage Informatique</h3>
-              <h4>Phonexpat</h4>
-              <p class="timeline-date en">July - August 2022</p>
-              <p class="timeline-date fr">Juillet - Août 2022</p>
-              <p class="en">Development of automatic configuration software for client modems. English-speaking assistance for the installation and configuration of connected devices. Redesign of the website using WordPress: <a href="http://www.phonexpat.net" target="_blank">www.phonexpat.net</a>.</p>
-              <p class="fr">Développement d'un logiciel de configuration automatique des modems clients. Assistance anglophone pour l'installation et la configuration d'objets connectés. Refonte du site web sous WordPress : <a href="http://www.phonexpat.net" target="_blank">www.phonexpat.net</a>.</p>
+          <div class="experience-card">
+            <div class="experience-card-side">
+              <div class="experience-logo">
+                <span class="logo-placeholder">PX</span>
+              </div>
+              <div class="experience-period">
+                <div class="experience-date en">Jul - Aug 2022</div>
+                <div class="experience-date fr">Juil - Août 2022</div>
+                <div class="experience-duration en">2 months</div>
+                <div class="experience-duration fr">2 mois</div>
+              </div>
+            </div>
+            <div class="experience-card-main">
+              <div class="experience-header">
+                <h3 class="experience-role en">IT Internship</h3>
+                <h3 class="experience-role fr">Stage Informatique</h3>
+                <h4 class="experience-company">Phonexpat</h4>
+                <div class="experience-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Paris, France</span>
+                </div>
+              </div>
+              <div class="experience-description">
+                <p class="en">Development of automatic configuration software for client modems. English-speaking assistance for the installation and configuration of connected devices. Redesign of the website using WordPress: <a href="http://www.phonexpat.net" target="_blank">www.phonexpat.net</a>.</p>
+                <p class="fr">Développement d'un logiciel de configuration automatique des modems clients. Assistance anglophone pour l'installation et la configuration d'objets connectés. Refonte du site web sous WordPress : <a href="http://www.phonexpat.net" target="_blank">www.phonexpat.net</a>.</p>
+              </div>
+              <div class="experience-skills">
+                <span class="skill-tag">WordPress</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Customer Support</span>
+                <span class="skill-tag">Networking</span>
+              </div>
             </div>
           </div>
           
           <!-- Artxbat -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">Quality Internship</h3>
-              <h3 class="fr">Stage qualité</h3>
-              <h4>Artxbat</h4>
-              <p class="timeline-date en">April - June 2022</p>
-              <p class="timeline-date fr">Avril - Juin 2022</p>
-              <p class="en">Redesign and update of the Quality Assurance Manual. Development of tracking sheets for operations.</p>
-              <p class="fr">Refonte et mise à jour du Manuel Assurance Qualité. Développement de fiches de suivi pour les opérations.</p>
+          <div class="experience-card">
+            <div class="experience-card-side">
+              <div class="experience-logo">
+                <span class="logo-placeholder">AX</span>
+              </div>
+              <div class="experience-period">
+                <div class="experience-date en">Apr - Jun 2022</div>
+                <div class="experience-date fr">Avr - Juin 2022</div>
+                <div class="experience-duration en">3 months</div>
+                <div class="experience-duration fr">3 mois</div>
+              </div>
+            </div>
+            <div class="experience-card-main">
+              <div class="experience-header">
+                <h3 class="experience-role en">Quality Internship</h3>
+                <h3 class="experience-role fr">Stage qualité</h3>
+                <h4 class="experience-company">Artxbat</h4>
+                <div class="experience-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Bayonne, France</span>
+                </div>
+              </div>
+              <div class="experience-description">
+                <p class="en">Redesign and update of the Quality Assurance Manual. Development of tracking sheets for operations.</p>
+                <p class="fr">Refonte et mise à jour du Manuel Assurance Qualité. Développement de fiches de suivi pour les opérations.</p>
+              </div>
+              <div class="experience-skills">
+                <span class="skill-tag">Quality Assurance</span>
+                <span class="skill-tag">Process Optimization</span>
+                <span class="skill-tag">Documentation</span>
+                <span class="skill-tag">ISO Standards</span>
+              </div>
             </div>
           </div>
 
           <!-- Venathec -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="en">Vibrations and Acoustic Internship</h3>
-              <h3 class="fr">Stage en vibration et acoustique</h3>
-              <h4>Venathec</h4>
-              <p class="timeline-date en">February - August 2025</p>
-              <p class="timeline-date fr">Février - Août 2025</p>
-              <p class="en">Modelization by finite elements under COMSOL for vibration analysis of existing systems, comparison with field measurements, and signal processing for experimental data analysis.</p>
-              <p class="fr">Modélisation par éléments finis sous COMSOL pour l'analyse vibratoire de systèmes existants, comparaison avec des mesures terrain, et traitement de signal pour l'analyse des données expérimentales.</p>
+          <div class="experience-card">
+            <div class="experience-card-side">
+              <div class="experience-logo">
+                <span class="logo-placeholder">VT</span>
+              </div>
+              <div class="experience-period">
+                <div class="experience-date en">Feb - Aug 2025</div>
+                <div class="experience-date fr">Fév - Août 2025</div>
+                <div class="experience-duration en">7 months</div>
+                <div class="experience-duration fr">7 mois</div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up"><span class="en">Get In Touch</span><span class="fr">Me Contacter</span></h2>
-        <div class="contact-content">
-          <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
-            <p class="en">I am looking to develop my technical and practical skills. Feel free to contact me to discuss opportunities or for any questions.</p>
-            <p class="fr">Je cherche à développer mes compétences techniques et pratiques. N'hésitez pas à me contacter pour discuter d'opportunités ou pour toute question.</p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>jozef.sawan@phonexpat.com</span>
+            <div class="experience-card-main">
+              <div class="experience-header">
+                <h3 class="experience-role en">Vibrations and Acoustic Internship</h3>
+                <h3 class="experience-role fr">Stage en vibration et acoustique</h3>
+                <h4 class="experience-company">Venathec</h4>
+                <div class="experience-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Nancy, France</span>
+                </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span></span>
+              <div class="experience-description">
+                <p class="en">Modelization by finite elements under COMSOL for vibration analysis of existing systems, comparison with field measurements, and signal processing for experimental data analysis.</p>
+                <p class="fr">Modélisation par éléments finis sous COMSOL pour l'analyse vibratoire de systèmes existants, comparaison avec des mesures terrain, et traitement de signal pour l'analyse des données expérimentales.</p>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span></span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-user"></i>
-                <span class="en"></span>
-                <span class="fr"></span>
+              <div class="experience-skills">
+                <span class="skill-tag">COMSOL</span>
+                <span class="skill-tag">FEA</span>
+                <span class="skill-tag">Signal Processing</span>
+                <span class="skill-tag">Vibration Analysis</span>
               </div>
             </div>
           </div>
-          
-          <form class="contact-form" data-aos="fade-left" data-aos-delay="200">
-            <div class="form-group">
-              <label for="name" class="form-label en">Name</label>
-              <label for="name" class="form-label fr">Nom</label>
-              <input type="text" id="name" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label en">Message</label>
-              <label for="message" class="form-label fr">Message</label>
-              <textarea id="message" class="form-textarea" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary en">Send</button>
-            <button type="submit" class="btn btn-primary fr">Envoyer</button>
-          </form>
         </div>
       </div>
     </section>
@@ -374,62 +468,101 @@
     <!-- Interests and Travel Section (Moved to the end) -->
     <section id="interests" class="interests-section section-padding">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-up"><span class="en">Interests & Travel</span><span class="fr">Centres d'intérêt & Voyages</span></h2>
+        <h2 class="section-title" data-aos="fade-up"><span class="en">Interests & Travel</span><span class="fr">Intérêts & Voyages</span></h2>
         <div class="interests-content" data-aos="fade-up" data-aos-delay="200">
           <div class="interests-block">
-            <h3 class="en">Interests</h3>
-            <h3 class="fr">Centres d'intérêt</h3>
+            <h3 class="en">Personal Interests</h3>
+            <h3 class="fr">Intérêts Personnels</h3>
             <div class="interests-list">
-              <span class="interest-item en">Volleyball</span>
-              <span class="interest-item fr">Volleyball</span>
-              <span class="interest-item en">Fishing</span>
-              <span class="interest-item fr">Pêche</span>
-              <span class="interest-item en">Tennis</span>
-              <span class="interest-item fr">Tennis</span>
-              <span class="interest-item en">Archery</span>
-              <span class="interest-item fr">Tir à l'arc</span>
-              <span class="interest-item en">Badminton</span>
-              <span class="interest-item fr">Badminton</span>
               <span class="interest-item en">Hiking</span>
               <span class="interest-item fr">Randonnée</span>
-              <span class="interest-item en">Photoshop</span>
-              <span class="interest-item fr">Photoshop</span>
-              <span class="interest-item en">Blender</span>
-              <span class="interest-item fr">Blender</span>
-              <span class="interest-item en">Graphic Design</span>
-              <span class="interest-item fr">Graphisme</span>
-              <span class="interest-item en">Website Creation</span>
-              <span class="interest-item fr">Création de site web</span>
-              <span class="interest-item en">Programming</span>
-              <span class="interest-item fr">Programmation</span>
+              <span class="interest-item en">Photography</span>
+              <span class="interest-item fr">Photographie</span>
+              <span class="interest-item en">Cooking</span>
+              <span class="interest-item fr">Cuisine</span>
+              <span class="interest-item en">Reading</span>
+              <span class="interest-item fr">Lecture</span>
+              <span class="interest-item en">Traveling</span>
+              <span class="interest-item fr">Voyages</span>
+              <span class="interest-item en">Technology</span>
+              <span class="interest-item fr">Technologie</span>
+              <span class="interest-item en">Music</span>
+              <span class="interest-item fr">Musique</span>
+              <span class="interest-item en">Cycling</span>
+              <span class="interest-item fr">Cyclisme</span>
             </div>
           </div>
           
           <div class="travel-block">
-            <h3 class="en">Travel</h3>
-            <h3 class="fr">Voyages</h3>
+            <h3 class="en">Countries Visited</h3>
+            <h3 class="fr">Pays Visités</h3>
             <div class="travel-list">
-              <span class="travel-item en">Germany</span>
-              <span class="travel-item fr">Allemagne</span>
-              <span class="travel-item en">USA</span>
-              <span class="travel-item fr">USA</span>
-              <span class="travel-item en">Austria</span>
-              <span class="travel-item fr">Autriche</span>
-              <span class="travel-item en">Belgium</span>
-              <span class="travel-item fr">Belgique</span>
-              <span class="travel-item en">Spain</span>
-              <span class="travel-item fr">Espagne</span>
-              <span class="travel-item en">Italy</span>
-              <span class="travel-item fr">Italie</span>
-              <span class="travel-item en">Lebanon</span>
-              <span class="travel-item fr">Liban</span>
-              <span class="travel-item en">United Kingdom</span>
-              <span class="travel-item fr">Royaume-Uni</span>
-              <span class="travel-item en">Turkey</span>
-              <span class="travel-item fr">Turquie</span>
+              <span class="travel-item">France</span>
+              <span class="travel-item">Austria</span>
+              <span class="travel-item">Lebanon</span>
+              <span class="travel-item">Germany</span>
+              <span class="travel-item">Italy</span>
+              <span class="travel-item">Spain</span>
+              <span class="travel-item">United Kingdom</span>
+              <span class="travel-item">Switzerland</span>
+              <span class="travel-item en">United States</span>
+              <span class="travel-item fr">États-Unis</span>
               <span class="travel-item en">Portugal</span>
               <span class="travel-item fr">Portugal</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up"><span class="en">Get In Touch</span><span class="fr">Me Contacter</span></h2>
+        <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-intro">
+            <p class="en">I am looking to develop my technical and practical skills. Feel free to contact me to discuss opportunities or for any questions.</p>
+            <p class="fr">Je cherche à développer mes compétences techniques et pratiques. N'hésitez pas à me contacter pour discuter d'opportunités ou pour toute question.</p>
+            
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/jozef-sawan/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form action="https://formsubmit.co/jozef.sawan@phonexpat.com" method="POST" id="contactForm">
+              <!-- FormSubmit.co CAPTCHA and Honeypot -->
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+              <input type="text" name="_honey" style="display:none">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label en">Name</label>
+                  <label for="name" class="form-label fr">Nom</label>
+                  <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label en">Email</label>
+                  <label for="email" class="form-label fr">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label en">Subject</label>
+                <label for="subject" class="form-label fr">Sujet</label>
+                <input type="text" id="subject" name="subject" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label en">Message</label>
+                <label for="message" class="form-label fr">Message</label>
+                <textarea id="message" name="message" rows="6" class="form-textarea" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-submit">Send Message</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -442,7 +575,6 @@
       <div class="social-links">
         <a href="https://www.linkedin.com/in/jozef-sawan/" class="social-link"><i class="fab fa-linkedin"></i></a>
         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-        <!--<a href="#" class="social-link"><i class="fas fa-envelope"></i></a>-->
       </div>
       <p class="footer-text en">© 2025 Jozef Sawan. All rights reserved.</p>
       <p class="footer-text fr">© 2025 Jozef Sawan. Tous droits réservés.</p>
@@ -456,26 +588,25 @@
     // Get the canvas container
     const container = document.getElementById('canvas-container');
     
-    // Create canvas element
+    // Create a canvas element
     const canvas = document.createElement('canvas');
-    canvas.style.position = 'absolute';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
     container.appendChild(canvas);
+    
+    // Get the canvas context
+    const ctx = canvas.getContext('2d');
     
     // Set canvas size to match window
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    // Get canvas context
-    const ctx = canvas.getContext('2d');
-    
-    // Animation configuration
+    // Configuration object
     const config = {
-      characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?",
-      density: 500,  // Increased number of characters
+      density: Math.min(100, Math.floor(window.innerWidth / 20)), // Adjust density based on screen size
+      speed: 0.5,
+      size: {
+        min: 1,
+        max: 3
+      },
       colors: [
         '#3F51B5', // Primary blue
         '#5C6BC0', // Accent blue
@@ -497,137 +628,91 @@
       characters.length = 0;
       
       for (let i = 0; i < config.density; i++) {
-        // Random character from our character set
-        const char = config.characters.charAt(Math.floor(Math.random() * config.characters.length));
+        // Calculate random angle and distance from center
+        const angle = Math.random() * Math.PI * 2;
+        const distance = Math.random() * config.galaxyRadius;
         
-        // Random color from our palette
+        // Add some randomness to z-position (thickness of the galaxy)
+        const zOffset = (Math.random() - 0.5) * config.galaxyThickness;
+        
+        // Calculate position based on angle and distance
+        const x = window.innerWidth / 2 + Math.cos(angle) * distance;
+        const y = window.innerHeight / 2 + Math.sin(angle) * distance;
+        
+        // Random size between min and max
+        const size = config.size.min + Math.random() * (config.size.max - config.size.min);
+        
+        // Random color from the config colors array
         const color = config.colors[Math.floor(Math.random() * config.colors.length)];
         
-        // Position in a spiral galaxy pattern
-        const angle = Math.random() * Math.PI * 2;
-        
-        // Distribute characters throughout the radius with better screen coverage
-        // Using a more uniform distribution to ensure characters reach the edges
-        const radiusScale = Math.pow(Math.random(), 0.7); // Adjusted distribution
-        const radius = radiusScale * config.galaxyRadius;
-        
-        // Adjust positioning to ensure characters reach screen edges
-        const x = Math.cos(angle + radius * 0.01) * radius + canvas.width / 2;
-        const y = Math.sin(angle + radius * 0.01) * radius + canvas.height / 2;
-        const z = (Math.random() - 0.5) * config.galaxyThickness;
-        
-        // Add to characters array
+        // Create character object
         characters.push({
-          char: char,
-          color: color,
-          x: x,
-          y: y,
-          z: z,
-          initialAngle: angle,
-          radius: radius,
-          // Scale size based on screen dimensions - adjusted for better visibility
-          size: (Math.min(window.innerWidth, window.innerHeight) / 90) * (0.7 + Math.random() * 0.9),
-          orbitSpeed: 0.01 + Math.random() * 0.02,
-          opacity: 0.6 + Math.random() * 0.4
+          x,
+          y,
+          z: zOffset,
+          size,
+          color,
+          angle,
+          distance,
+          // Add slight random movement
+          speed: config.speed * (0.8 + Math.random() * 0.4),
+          // Add slight opacity variation
+          opacity: 0.5 + Math.random() * 0.5
         });
       }
-      
-      // Sort characters by z-index for pseudo-3D effect
-      characters.sort((a, b) => a.z - b.z);
     }
     
-    // Create initial characters
-    createCharacters();
-    
-    // Characters are already sorted in createCharacters function
-    
-    // Animation variables
-    let galaxyRotation = 0;
-    let mouseX = 0;
-    let mouseY = 0;
-    
-    // Track mouse position
-    document.addEventListener('mousemove', (event) => {
-      mouseX = (event.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
-      mouseY = (event.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
-    });
-    
-    // Animation loop
+    // Animation function
     function animate() {
-      requestAnimationFrame(animate);
-      
       // Clear canvas
-      ctx.fillStyle = '#0a0a0a';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Update galaxy rotation
-      galaxyRotation += config.rotationSpeed;
-      
-      // Apply mouse influence
-      const mouseInfluenceX = mouseX * 0.2;
-      const mouseInfluenceY = mouseY * 0.2;
-      
-      // Update and draw characters
-      const time = Date.now() * 0.001;
-      
+      // Update and draw each character
       characters.forEach(char => {
-        // Update position based on orbit
-        const angle = char.initialAngle + time * char.orbitSpeed + galaxyRotation;
-        const radius = char.radius;
+        // Update angle for rotation
+        char.angle += config.rotationSpeed * char.speed;
         
-        char.x = Math.cos(angle + radius * 0.01) * radius + canvas.width / 2;
-        char.x += mouseInfluenceX * radius * 0.5;
-        
-        char.y = Math.sin(angle + radius * 0.01) * radius + canvas.height / 2;
-        char.y += mouseInfluenceY * radius * 0.5;
-        
-        // Calculate size and opacity based on z position
-        const sizeModifier = 1 + (char.z / config.galaxyThickness) * 0.5;
-        const actualSize = char.size * sizeModifier;
-        
-        // Pulsating opacity effect
-        const opacityPulse = Math.sin(time * 2 + char.initialAngle) * 0.2 + 0.8;
-        const actualOpacity = char.opacity * opacityPulse;
+        // Update position based on new angle
+        char.x = window.innerWidth / 2 + Math.cos(char.angle) * char.distance;
+        char.y = window.innerHeight / 2 + Math.sin(char.angle) * char.distance;
         
         // Draw character
-        ctx.font = `${actualSize}px Arial`;
+        ctx.beginPath();
+        ctx.arc(char.x, char.y, char.size, 0, Math.PI * 2);
         ctx.fillStyle = char.color;
-        ctx.globalAlpha = actualOpacity;
-        ctx.fillText(char.char, char.x, char.y);
+        ctx.globalAlpha = char.opacity;
+        ctx.fill();
       });
       
       // Reset global alpha
       ctx.globalAlpha = 1;
+      
+      // Request next frame
+      requestAnimationFrame(animate);
     }
-    
-    // Start animation
-    console.log('Starting animation loop');
-    animate();
     
     // Handle window resize
     window.addEventListener('resize', () => {
-      // Update canvas dimensions
+      // Update canvas size
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       
-      // Update galaxy radius based on new screen size - using max dimension for better coverage
-      config.galaxyRadius = Math.max(window.innerWidth, window.innerHeight) * 0.7;
-      
-      // Recreate all characters to fit the new screen size
+      // Recreate characters for new dimensions
       createCharacters();
     });
     
-    // Limit canvas animation to hero section
+    // Initialize
+    createCharacters();
+    animate();
+    
+    // Fade out canvas when scrolling down
     window.addEventListener('scroll', () => {
       const scrollPosition = window.scrollY;
-      const heroHeight = document.querySelector('.hero-section').offsetHeight;
-      
-      // Fade out canvas as user scrolls down
-      if (scrollPosition <= heroHeight) {
-        const opacity = 1 - (scrollPosition / heroHeight);
+      if (scrollPosition > 100) {
+        const opacity = 1 - Math.min(1, (scrollPosition - 100) / 300);
         canvas.style.opacity = opacity.toString();
       } else {
-        canvas.style.opacity = '0';
+        canvas.style.opacity = '1';
       }
     });
   </script>
@@ -636,29 +721,84 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- Background Effects Script -->
   <script src="background-effects.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3b0b25e80c.js" crossorigin="anonymous"></script>
   <script>
-    // Initialize AOS
+    // Initialize AOS with enhanced settings
     AOS.init({
       duration: 800,
-      easing: 'ease',
+      easing: 'ease-out',
       once: true,
       offset: 100,
-      delay: 100
+      delay: 100,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
     });
     
-    // Smooth scrolling for anchor links
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      
+      if (menuToggle.classList.contains('active')) {
+        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Improved smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
         
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80, // Offset for header
-            behavior: 'smooth'
-          });
+        // Check if targetId is valid
+        if (targetId && targetId !== '#') {
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            // Get the header height dynamically
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 80; // Default to 80px if header not found
+            
+            // Calculate the element's position relative to the document
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            
+            // Calculate the offset position
+            const offsetPosition = elementPosition - headerHeight - 20;
+            
+            // Scroll to the calculated position
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          } else {
+            console.error(`Target element ${targetId} not found`);
+          }
         }
       });
     });
@@ -690,6 +830,61 @@
         langFR.classList.add('active');
         langEN.classList.remove('active');
         localStorage.setItem('language', 'fr');
+      });
+    });
+    
+    // Ensure the contact form works with language switching
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to update form placeholders based on language
+      function updateFormPlaceholders() {
+        const isEnglish = !document.body.classList.contains('fr-active');
+        const form = document.getElementById('contactForm');
+        
+        if (form) {
+          // Update placeholders based on language
+          const placeholders = {
+            name: isEnglish ? "Your Name" : "Votre Nom",
+            email: isEnglish ? "Your Email" : "Votre Email",
+            subject: isEnglish ? "Subject" : "Sujet",
+            message: isEnglish ? "Your Message" : "Votre Message"
+          };
+          
+          // Set placeholders
+          document.getElementById('name').placeholder = placeholders.name;
+          document.getElementById('email').placeholder = placeholders.email;
+          document.getElementById('subject').placeholder = placeholders.subject;
+          document.getElementById('message').placeholder = placeholders.message;
+          
+          // Update button text
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.textContent = isEnglish ? "Send Message" : "Envoyer";
+          }
+          
+          // Update visibility of language-specific elements
+          const enElements = form.querySelectorAll('.en');
+          const frElements = form.querySelectorAll('.fr');
+          
+          enElements.forEach(el => {
+            el.style.display = isEnglish ? 'block' : 'none';
+          });
+          
+          frElements.forEach(el => {
+            el.style.display = isEnglish ? 'none' : 'block';
+          });
+        }
+      }
+      
+      // Update form fields on page load
+      updateFormPlaceholders();
+      
+      // Update form fields when language is switched
+      const langButtons = document.querySelectorAll('.lang-btn');
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Small timeout to ensure language switch is complete
+          setTimeout(updateFormPlaceholders, 50);
+        });
       });
     });
   </script>
