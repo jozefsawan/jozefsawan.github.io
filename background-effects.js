@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get canvas context
   const ctx = backgroundCanvas.getContext('2d');
   
-  // Configuration for particles
-  const config = {
+  // Configuration for particles - make it globally accessible for theme switching
+  window.particlesConfig = {
     particleCount: window.innerWidth < 768 ? 40 : 80, // Reduce count on mobile
     particleColor: '#5C6BC0', // Accent blue
     lineColor: 'rgba(93, 107, 192, 0.15)', // Lighter blue with transparency
@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     animationSpeed: 0.02,
     responsive: true
   };
+  
+  // Create a local reference for easier access
+  const config = window.particlesConfig;
   
   // Particles array
   let particles = [];

@@ -32,10 +32,17 @@
             <li style="--i:6"><a href="#contact" class="en">Contact</a><a href="#contact" class="fr">Contact</a></li>
           </ul>
         </nav>
-        <div class="language-switcher">
-          <button id="lang-en" class="lang-btn active">EN</button>
-          <span class="lang-separator">|</span>
-          <button id="lang-fr" class="lang-btn">FR</button>
+        <div class="header-controls">
+          <div class="theme-switcher">
+            <button id="theme-toggle" class="theme-btn">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+          <div class="language-switcher">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <span class="lang-separator">|</span>
+            <button id="lang-fr" class="lang-btn">FR</button>
+          </div>
         </div>
       </header>
       
@@ -94,6 +101,8 @@
             
             <p class="en">I hold French, Austrian, and Lebanese nationalities, which has given me a multicultural perspective and fluency in multiple languages.</p>
             <p class="fr">Je possède les nationalités française, autrichienne et libanaise, ce qui m'a donné une perspective multiculturelle et une maîtrise de plusieurs langues.</p>
+            
+            <div class="spacer"></div>
             
             <div class="skills-container">
               <h3 class="en">Languages</h3>
@@ -534,7 +543,7 @@
             <form action="https://formsubmit.co/jozef.sawan@phonexpat.com" method="POST" id="contactForm">
               <!-- FormSubmit.co CAPTCHA and Honeypot -->
               <input type="hidden" name="_captcha" value="true">
-              <input type="hidden" name="_next" value="https://jozefsawan.github.io/">
+              <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
               <input type="text" name="_honey" style="display:none">
               
               <div class="form-row">
@@ -833,6 +842,56 @@
       });
     });
     
+    // Theme switcher functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      
+      // Check if there's a saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+      
+      // Theme toggle button click
+      themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('light-mode');
+        
+        // Update icon
+        if (document.body.classList.contains('light-mode')) {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+          localStorage.setItem('theme', 'dark');
+        }
+        
+        // Update background particles color if needed
+        updateParticlesForTheme();
+      });
+      
+      // Function to update particles color based on theme
+      function updateParticlesForTheme() {
+        // This will be called if you have a global config object for particles
+        if (window.particlesConfig) {
+          if (document.body.classList.contains('light-mode')) {
+            window.particlesConfig.particleColor = '#3a56d4';
+            window.particlesConfig.lineColor = 'rgba(58, 86, 212, 0.15)';
+          } else {
+            window.particlesConfig.particleColor = '#5C6BC0';
+            window.particlesConfig.lineColor = 'rgba(93, 107, 192, 0.15)';
+          }
+        }
+      }
+      
+      // Initialize particles color based on current theme
+      updateParticlesForTheme();
+    });
+
     // Ensure the contact form works with language switching
     document.addEventListener('DOMContentLoaded', function() {
       // Function to update form placeholders based on language
