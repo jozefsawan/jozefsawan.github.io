@@ -14,6 +14,9 @@
 <body>
   <div id="canvas-container"></div>
   
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu-overlay"></div>
+  
   <!-- Hero Section with animated background -->
   <div class="hero-section">
     <div class="content">
@@ -35,7 +38,12 @@
         <div class="header-controls">
           <div class="theme-switcher">
             <button id="theme-toggle" class="theme-btn">
-              <i class="fas fa-moon"></i>
+              <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+              </svg>
+              <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v.01A1 1 0 0 0 12 2zm0 19a1 1 0 0 0-1 1v.01a1 1 0 1 0 2 0V22a1 1 0 0 0-1-1zm6-11a1 1 0 0 0 1-1 1 1 0 0 0 0-2 1 1 0 0 0-1 1 1 1 0 0 0 0 2zM6 12a1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1zm13.66-5.66a1 1 0 0 0 0-1.42 1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.41 1 1 0 0 0 1.41.01zm-17.32 0a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41 1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.41zM19.66 17.66a1 1 0 0 0-1.41 0 1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41zm-17.32 0a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41 1 1 0 0 0-1.41 0z"/>
+              </svg>
             </button>
           </div>
           <div class="language-switcher">
@@ -55,11 +63,11 @@
           <h1 class="en">Jozef <span class="text-gradient">Sawan</span></h1>
           <h1 class="fr">Jozef <span class="text-gradient">Sawan</span></h1>
           <div class="hero-subtitle">
-            <span class="en">Mechanical <span class="highlight">Engineering</span></span>
-            <span class="fr">Ingénierie <span class="highlight">Mécanique</span></span>
+            <span class="en"><span class="highlight">Portfolio</span></span>
+            <span class="fr"><span class="highlight">Portfolio</span></span>
           </div>
-          <p class="lead en">Master's degree in Mechanical and Materials Engineering with a passion for innovation and problem-solving.</p>
-          <p class="lead fr">Master de Génie Mécanique et Matériaux avec une passion pour l'innovation et la résolution de problèmes.</p>
+          <p class="lead en"><em>"The man who moves a mountain begins by carrying away small stones."</em> — Confucius</p>
+          <p class="lead fr"><em>"Celui qui déplace une montagne commence par déplacer de petites pierres."</em> — Confucius</p>
           <div class="cta-buttons">
             <a href="#experience" class="btn btn-primary en">
               <i class="fas fa-briefcase"></i> View My Experience
@@ -237,7 +245,7 @@
         <div class="education-grid" data-aos="fade-up">
           <div class="education-card">
             <div class="education-card-header">
-              <div class="education-year">2024 - 2025</div>
+              <div class="education-year">Master</div>
               <div class="education-degree">
                 <h3 class="en">Master's Degree in Mechanical Engineering and Materials (GMM)</h3>
                 <h3 class="fr">Master 2 en Génie Mécanique et Matériaux (GMM)</h3>
@@ -261,7 +269,7 @@
 
           <div class="education-card">
             <div class="education-card-header">
-              <div class="education-year">2018 - 2023</div>
+              <div class="education-year">Bachelor</div>
               <div class="education-degree">
                 <h3 class="en">Bachelor's Degree in Mechanical Engineering and Production (GMP)</h3>
                 <h3 class="fr">Licence en Génie Mécanique et Productique (GMP)</h3>
@@ -419,7 +427,7 @@
                 <h4 class="experience-company">Artxbat</h4>
                 <div class="experience-location">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>Bayonne, France</span>
+                  <span>Paris, France</span>
                 </div>
               </div>
               <div class="experience-description">
@@ -455,7 +463,7 @@
                 <h4 class="experience-company">Venathec</h4>
                 <div class="experience-location">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>Nancy, France</span>
+                  <span>Paris, France</span>
                 </div>
               </div>
               <div class="experience-description">
@@ -757,25 +765,40 @@
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
+    
+    function openMobileMenu() {
+      navMenu.classList.add('active');
+      menuToggle.classList.add('active');
+      menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+      mobileOverlay.style.opacity = '1';
+      mobileOverlay.style.visibility = 'visible';
+    }
+    
+    function closeMobileMenu() {
+      navMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+      menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      document.body.style.overflow = ''; // Restore scrolling
+      mobileOverlay.style.opacity = '0';
+      mobileOverlay.style.visibility = 'hidden';
+    }
     
     menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-      
-      if (menuToggle.classList.contains('active')) {
-        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+      if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
       } else {
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        openMobileMenu();
       }
     });
     
+    // Close mobile menu when clicking on the overlay
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+    
     // Close mobile menu when clicking on a link
     document.querySelectorAll('nav ul li a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
     
     // Improved smooth scrolling for anchor links
@@ -845,28 +868,27 @@
     // Theme switcher functionality
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = themeToggle.querySelector('i');
       
       // Check if there's a saved theme preference
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
         document.body.classList.add('light-mode');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
       }
       
       // Theme toggle button click
       themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('light-mode');
         
-        // Update icon
+        // Add a small animation to make the button more interactive
+        themeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+          themeToggle.style.transform = 'rotate(0)';
+        }, 300);
+        
+        // Save theme preference
         if (document.body.classList.contains('light-mode')) {
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
           localStorage.setItem('theme', 'light');
         } else {
-          themeIcon.classList.remove('fa-sun');
-          themeIcon.classList.add('fa-moon');
           localStorage.setItem('theme', 'dark');
         }
         

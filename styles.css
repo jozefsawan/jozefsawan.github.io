@@ -232,7 +232,7 @@ nav ul li a:hover::after {
 
 /* Mobile menu button */
 .menu-toggle {
-  display: none;
+  display: none; /* Hidden by default on desktop */
   background: transparent;
   border: none;
   color: var(--text-color);
@@ -242,10 +242,29 @@ nav ul li a:hover::after {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  position: relative;
+}
+
+/* Mobile menu overlay */
+#mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+body.light-mode #mobile-menu-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-toggle:hover {
@@ -261,6 +280,10 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+  }
+  
+  nav {
+    position: static; /* Ensure nav container doesn't interfere with positioning */
   }
   
   nav ul {
@@ -314,6 +337,28 @@ nav ul li a:hover::after {
   
   nav ul li a::after {
     bottom: 0.5rem;
+  }
+  
+  /* Fix for language-specific links in mobile menu */
+  nav ul li a.en, nav ul li a.fr {
+    display: inline-block;
+    width: auto;
+  }
+  
+  body.fr-active nav ul li a.fr {
+    display: inline-block;
+  }
+  
+  body.fr-active nav ul li a.en {
+    display: none;
+  }
+  
+  body:not(.fr-active) nav ul li a.en {
+    display: inline-block;
+  }
+  
+  body:not(.fr-active) nav ul li a.fr {
+    display: none;
   }
 }
 
@@ -375,6 +420,12 @@ nav ul li a:hover::after {
   margin-left: auto;
   margin-right: auto;
   color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.hero-content .lead em {
+  font-style: italic;
+  color: var(--text-color);
 }
 
 .cta-buttons {
@@ -509,16 +560,88 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
   .header-controls {
     gap: 0.8rem;
-    position: absolute;
-    right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
   }
   
   .theme-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin-right: 0;
+  }
+  
+  .language-switcher {
+    margin-left: 5px;
+  }
+  
+  /* Adjust header layout for mobile */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  nav {
+    order: 3;
+  }
+  
+  .header-controls {
+    order: 2;
+  }
+  
+  .menu-toggle {
+    margin-left: 10px;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .theme-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px; /* Prevent shrinking */
+  }
+  
+  .theme-btn i {
+    font-size: 0.9rem;
+  }
+  
+  .lang-btn {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  header {
+    padding: 0.7rem;
+  }
+  
+  /* Adjust hero section for small screens */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -550,10 +673,10 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px; /* Prevent shrinking */
   border-radius: 50%;
-  font-size: 1.3rem;
   background: var(--accent-gradient);
   color: white;
   border: none;
@@ -561,11 +684,73 @@ nav ul li a:hover::after {
   z-index: 1001;
   box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
   margin-right: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Theme icon styles */
+.theme-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Hide sun icon by default (dark mode) */
+.sun-icon {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* Show sun icon in light mode */
+body.light-mode .sun-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hide moon icon in light mode */
+body.light-mode .moon-icon {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* Enhance icon visibility on mobile */
+@media (max-width: 768px) {
+  .theme-icon {
+    width: 16px;
+    height: 16px;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.5));
+  }
+  
+  /* Add a subtle pulse animation to make the icon more noticeable */
+  .theme-btn:active .theme-icon {
+    animation: pulse 0.3s ease-out;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .theme-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+}
+
+/* Adjust theme button in light mode for better contrast */
+body.light-mode .theme-btn {
+  background: linear-gradient(135deg, #3a56d4, #4cc9f0);
+  box-shadow: 0 4px 10px rgba(67, 97, 238, 0.2);
 }
 
 /* About Section */
