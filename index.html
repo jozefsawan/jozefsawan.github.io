@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio – Jozef Sawan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio de Jozef Sawan – Ingénieur en Génie Mécanique et Matériaux. Projets de simulation numérique, mécanique des structures, vibro-acoustique, éléments finis, CFD et matériaux composites."
+  />
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav-left">
+        <div class="avatar" aria-hidden="true">JS</div>
+        <div class="nav-title">
+          <div class="nav-title-main">Jozef Sawan</div>
+          <div class="nav-title-sub">Ingénieur mécanique · simulation numérique</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#projets" class="pill-link">
+          Projets <span>FEA · CFD · Vibro</span>
+        </a>
+        <a href="#experience" class="pill-link">
+          Expériences <span>Stage & Entrepreneuriat</span>
+        </a>
+        <a href="#skills" class="pill-link">
+          Compétences <span>Logiciels & soft skills</span>
+        </a>
+        <a href="#contact" class="pill-link">
+          Contact <span>Dispo R&D / BE</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Génie mécanique · Simulation numérique · Structures & fluides
+        </div>
+
+        <h1 class="hero-title" id="hero-title">
+          Ingénieur en <span>Génie Mécanique & Matériaux</span><br />
+        </h1>
+
+        <p class="hero-subtitle">
+          Diplômé d’un Master en Génie Mécanique et Matériaux
+          à l’Université Bretagne Sud, j’utilise la simulation numérique et les
+          outils de calcul pour comprendre, dimensionner et optimiser des systèmes
+          mécaniques, en R&amp;D comme en environnement industriel, sur des projets
+          variés mêlant modélisation et expérimentation.
+        </p>
+
+        <div class="hero-tags" aria-label="Mots-clés principaux">
+          <div class="chip">Éléments finis</div>
+          <div class="chip">COMSOL · Abaqus · Ansys · SolidWorks</div>
+          <div class="chip">Mécanique des structures</div>
+          <div class="chip">CFD · Profils NACA · Foils</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-primary">
+            Voir les projets
+            <span aria-hidden="true">↓</span>
+          </a>
+          <!-- Remplace # par le lien vers ton CV PDF -->
+          <a href="assets/CV_Jozef_Sawan.pdf" class="btn btn-ghost" download>
+            Télécharger mon CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-label="Résumé profil">
+        <div class="hero-card">
+          <div class="hero-badge-floating">
+            <span class="hero-badge-pulse"></span>
+            Ouvert aux opportunités · R&D / BE
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-stat">
+              <div class="hero-stat-label">Formation</div>
+              <div class="hero-stat-value">
+                Master 2 GMM – UBS<br />
+                Licence GMP – UGA
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-label">Stage de fin d’études</div>
+              <div class="hero-stat-value">
+                VENATHEC (R&D vibro-acoustique)<br />
+                COMSOL · Mesures in situ
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-label">Logiciels clés</div>
+              <div class="hero-stat-value">
+                COMSOL, Abaqus, Ansys, SolidWorks,<br />
+                MATLAB, Python
+              </div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-label">Langues</div>
+              <div class="hero-stat-value">
+                Français (natif), Anglais (C2),<br />
+                Allemand (A2), Arabe libanais (notions)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <!-- PROJETS -->
+      <section id="projets" aria-labelledby="projets-title">
+        <div class="section-header">
+          <h2 class="section-title" id="projets-title">
+            Projets sélectionnés
+            <span class="section-title-pill">Simulation · Vibrations · Mise en forme</span>
+          </h2>
+          <p class="section-tagline">
+            Un aperçu de mes travaux académiques et de mon stage de fin d’études.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Hydrofoil -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/5.png" alt="Visualisation d’un hydrofoil de profil NACA 6412" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">Dimensionnement d’un hydrofoil composite</h3>
+                <span class="card-tag">CFD · FEA</span>
+              </div>
+              <p class="card-meta">
+                Master 2 GMM · Université Bretagne Sud · 2025
+              </p>
+              <p class="card-desc">
+                Étude d’un hydrofoil de profil NACA 6412 : calculs de portance
+                et de traînée via XFLR5, puis application des efforts sur un modèle
+                éléments finis pour vérifier la tenue mécanique et envisager une version
+                en matériau composite.
+              </p>
+              <div class="tags-row">
+                <span class="tag">NACA 6412</span>
+                <span class="tag">Hydrofoil</span>
+                <span class="tag">Portance / traînée</span>
+                <span class="tag">XFLR5</span>
+                <span class="tag">Éléments finis</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Projet de master · binôme</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Simulation soudage -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/6.png" alt="Simulation numérique d’un soudage en T" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">
+                  Simulation numérique d’un soudage en T
+                </h3>
+                <span class="card-tag">Thermo-mécanique</span>
+              </div>
+              <p class="card-meta">
+                Master 2 GMM · TP de simulation numérique · 2025
+              </p>
+              <p class="card-desc">
+                Modélisation 2D du soudage d’une structure en T en acier martensitique 410 :
+                couplage thermique–métallurgique–mécanique, prise en compte des
+                transformations de phases, analyse de la zone affectée thermiquement (ZAT),
+                des contraintes résiduelles et des déformations induites par le procédé.
+              </p>
+              <div class="tags-row">
+                <span class="tag">ZAT</span>
+                <span class="tag">Transformations de phases</span>
+                <span class="tag">Thermo-mécanique</span>
+                <span class="tag">Soudage</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Cas d’étude détaillé</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vibro plaques composites -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/4.jpg" alt="Montage d’essais de vibrations sur plaques composites" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">
+                  Essais de vibration sur plaques composites lin / carbone
+                </h3>
+                <span class="card-tag">Vibrations</span>
+              </div>
+              <p class="card-meta">
+                Master 2 GMM · IRDL · 2025
+              </p>
+              <p class="card-desc">
+                Campagne d’essais au vibromètre laser sur des plaques composites lin/carbone,
+                étude de la réponse dynamique et des modes propres, puis comparaison avec
+                des modèles numériques sous Abaqus et COMSOL pour valider les hypothèses
+                de modélisation et la représentation du matériau.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Vibromètre laser</span>
+                <span class="tag">Plaques composites</span>
+                <span class="tag">Analyse modale</span>
+                <span class="tag">Abaqus</span>
+                <span class="tag">COMSOL</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Expérimental + numérique</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- NACA / CFD -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/3.png" alt="Écoulement autour d’un profil NACA 0015" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">
+                  Écoulement autour d’un cylindre et d’un profil NACA 0015
+                </h3>
+                <span class="card-tag">CFD</span>
+              </div>
+              <p class="card-meta">
+                Master 2 GMM · Mécanique des fluides · 2025
+              </p>
+              <p class="card-desc">
+                Étude numérique de la traînée sur un cylindre pour différents nombres
+                de Reynolds, puis analyse d’un profil NACA 0015 importé sous SolidWorks :
+                calcul des coefficients de traînée et de portance en fonction de l’angle
+                d’attaque, observation des régimes d’écoulement et visualisation des
+                champs de vitesse.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Nombre de Reynolds</span>
+                <span class="tag">Traînée / portance</span>
+                <span class="tag">NACA 0015</span>
+                <span class="tag">SolidWorks</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Mécanique des fluides numérique</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Emboutissage -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/1.png" alt="Simulation d’un procédé d’emboutissage de tôle" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">
+                  Mise en forme d’une tôle par déformation plastique
+                </h3>
+                <span class="card-tag">Non linéaire</span>
+              </div>
+              <p class="card-meta">
+                Master 2 GMM · Projet technique · 2025
+              </p>
+              <p class="card-desc">
+                Simulation d’un procédé d’emboutissage à partir d’un modèle 2D, puis 3D :
+                définition de la géométrie de l’outil et de la tôle, choix du modèle
+                de matériau, prise en compte de l’anisotropie, comparaison des résultats
+                avec et sans anisotropie et analyse de la distribution des contraintes
+                et des épaisseurs.
+              </p>
+              <div class="tags-row">
+                <span class="tag">Emboutissage</span>
+                <span class="tag">Élasto-plasticité</span>
+                <span class="tag">Anisotropie</span>
+                <span class="tag">Abaqus</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Problèmes non linéaires</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage VENATHEC -->
+          <article class="card">
+            <div class="card-media">
+              <img src="img/2.png" alt="Schéma de propagation vibratoire étudié chez VENATHEC" />
+              <div class="card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">
+                  Modèles vibro-acoustiques multi-sources (stage VENATHEC)
+                </h3>
+                <span class="card-tag">Stage R&D</span>
+              </div>
+              <p class="card-meta">
+                VENATHEC · Agence Paris · Fév – Août 2025
+              </p>
+              <p class="card-desc">
+                Étude et optimisation de modèles numériques en interaction vibro-acoustique :
+                modélisation sous COMSOL de la propagation vibratoire à travers sol, pieux,
+                massifs béton, gaines de ventilation et planchers collaborants, comparaison
+                calculs / mesures in situ, ajustement des paramètres et développement de
+                scripts Python pour automatiser le post-traitement.
+              </p>
+              <div class="tags-row">
+                <span class="tag">COMSOL Multiphysics</span>
+                <span class="tag">Propagation vibratoire</span>
+                <span class="tag">Mesures in situ</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="card-footer">
+                <span class="pill-mini">Bureau d’études vibro-acoustique</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE & FORMATION -->
+      <section id="experience" aria-labelledby="experience-title">
+        <div class="section-header">
+          <h2 class="section-title" id="experience-title">
+            Expériences & formation
+            <span class="section-title-pill">Terrain, BE & entrepreneuriat</span>
+          </h2>
+          <p class="section-tagline">
+            Un profil à l’aise en simulation, sur le terrain et dans la relation client.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-size: 14px; margin-bottom: 8px;">Expériences professionnelles</h3>
+            <div class="timeline">
+              <article class="card">
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h4 class="card-title">Stage R&D – Vibration & Acoustique</h4>
+                    <span class="card-tag">VENATHEC</span>
+                  </div>
+                  <p class="card-meta">Fév – Août 2025 · Paris (France)</p>
+                  <p class="card-desc">
+                    Modélisation par éléments finis sous COMSOL de structures soumises à des
+                    excitations vibratoires, analyse modale et en admittance, validation des
+                    résultats numériques par comparaison avec des mesures vibratoires et
+                    acoustiques, développement de scripts Python pour le post-traitement
+                    et optimisation des méthodologies de simulation multi-sources.
+                  </p>
+                  <div class="tags-row">
+                    <span class="tag">COMSOL</span>
+                    <span class="tag">Vibrations du sol</span>
+                    <span class="tag">Mesures vibratoires</span>
+                    <span class="tag">Python</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h4 class="card-title">Création d’entreprise – JoCard</h4>
+                    <span class="card-tag">Pépite</span>
+                  </div>
+                  <p class="card-meta">Mars – Juil 2024 · Lorient (France)</p>
+                  <p class="card-desc">
+                    Projet de création d’entreprise dans le cadre du Statut National
+                    d’Étudiant-Entrepreneur (SNEE) : étude de marché, définition de la
+                    proposition de valeur, prototypage, pitch et communication, mise en place
+                    d’outils web pour présenter le projet.
+                  </p>
+                  <div class="tags-row">
+                    <span class="tag">Entrepreneuriat</span>
+                    <span class="tag">Gestion de projet</span>
+                    <span class="tag">Pitch & communication</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h4 class="card-title">Stages informatique & web</h4>
+                    <span class="card-tag">iGoFlex · Phonexpat</span>
+                  </div>
+                  <p class="card-meta">Déc 2022 – Sept 2023 & Juil – Août 2022</p>
+                  <p class="card-desc">
+                    Participation à l’élaboration d’une application embarquée, développement
+                    d’un site marchand, automatisation de l’intégration des commandes dans une
+                    base de données, développement d’un logiciel de configuration automatique
+                    des modems clients, assistance anglophone et refonte de sites web.
+                  </p>
+                  <div class="tags-row">
+                    <span class="tag">Développement</span>
+                    <span class="tag">Automatisation</span>
+                    <span class="tag">Support anglophone</span>
+                    <span class="tag">Web</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h4 class="card-title">Stage qualité – Artxbat</h4>
+                    <span class="card-tag">Qualité</span>
+                  </div>
+                  <p class="card-meta">Avr – Juin 2022</p>
+                  <p class="card-desc">
+                    Refonte et mise à jour du Manuel d’Assurance Qualité, création de fiches
+                    de suivi opérationnel, mise en place d’outils pour structurer les
+                    procédures internes et faciliter le suivi des chantiers.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 14px; margin-bottom: 8px;">Formation & centres d’intérêt</h3>
+            <article class="card">
+              <div class="list">
+                <div>
+                  <strong>Master 2 – Génie Mécanique & Matériaux (GMM)</strong><br />
+                  Université Bretagne Sud
+                </div>
+                <div>
+                  <strong>Licence – Génie Mécanique & Productique (GMP)</strong><br />
+                  Université Grenoble Alpes
+                </div>
+              </div>
+            </article>
+
+            <article class="card" style="margin-top: 10px;">
+              <div class="list">
+                <div>
+                  <strong>Sports</strong> : volleyball, tennis, badminton, tir à l’arc,
+                  randonnée, pêche.
+                </div>
+                <div>
+                  <strong>Création</strong> : impression 3D, graphisme, modélisation
+                  3D, création de sites web.
+                </div>
+                <div>
+                  <strong>Voyages</strong> : Allemagne, Autriche, Portugal, Espagne,
+                  États-Unis, Italie, Liban, Royaume-Uni, Turquie.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPETENCES -->
+      <section id="skills" aria-labelledby="skills-title">
+        <div class="section-header">
+          <h2 class="section-title" id="skills-title">
+            Compétences techniques
+            <span class="section-title-pill">Simu numérique · Dev · Outils</span>
+          </h2>
+          <p class="section-tagline">
+            Un socle solide en mécanique, complété par des outils numériques modernes.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="list">
+              <div><strong>Mécanique & dynamique des structures</strong></div>
+              <div>RDM : flexion, traction, torsion, cisaillement.</div>
+              <div>Contraintes et déformations dans les structures.</div>
+              <div>Analyse modale, vibrations libres et forcées.</div>
+              <div>Comportement dynamique de poutres et plaques.</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="list">
+              <div><strong>Éléments finis & simulation</strong></div>
+              <div>Modélisation 1D / 2D / 3D, choix de maillage.</div>
+              <div>Conditions aux limites et validation des modèles.</div>
+              <div>Optimisation du temps de calcul.</div>
+              <div>Problèmes non linéaires (plasticité, contact, grandes déformations).</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="list">
+              <div><strong>Logiciels & programmation</strong></div>
+              <div>COMSOL, Abaqus, Ansys Workbench, SolidWorks, CES EduPack, ESPRIT TNG.</div>
+              <div>Python, MATLAB, RDM6, LaTeX, Pack Office.</div>
+              <div>WordPress, outils Google (Ads, Analytics, GTM).</div>
+              <div>Photoshop, Blender, outils de création graphique & web.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="section-header">
+          <h2 class="section-title" id="contact-title">
+            Contact
+            <span class="section-title-pill">Collaborations & opportunités</span>
+          </h2>
+          <p class="section-tagline">
+            Ouvert à un premier poste d’ingénieur d’études / R&D ou à des collaborations en simulation numérique.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="list">
+              <div><strong>Localisation</strong> : 78100 Saint-Germain-en-Laye, France</div>
+              <div><strong>Téléphone</strong> : 06 52 62 95 83</div>
+              <div>
+                <strong>Email</strong> :
+                <a href="mailto:jozefsawan@protonmail.com">jozefsawan@protonmail.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="list">
+              <div>Poste recherché :</div>
+              <div>• Ingénieur d’études / R&D en mécanique,</div>
+              <div>• Simulation numérique (FEA / CFD),</div>
+              <div>• Ingénierie mécanique & matériaux.</div>
+              <div style="margin-top: 6px;">
+                Intéressé par des projets mêlant modèles numériques, mesures expérimentales
+                et optimisation de structures pour des applications industrielles concrètes.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span style="opacity: 0.8;">Dernière mise à jour : décembre 2025.</span>
+    </footer>
+  </div>
+</body>
+</html>
