@@ -702,3 +702,24 @@
         text-align: right;
       }
     }
+
+/* ===== Header mobile : suppression du menu ===== */
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .nav-left {
+    gap: 10px;
+  }
+
+  .nav-title-sub {
+    font-size: 11px;
+  }
+}
+
